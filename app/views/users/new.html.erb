@@ -1,6 +1,27 @@
-<h2> Registration</h2>
+
+
+
+<div class="container-fluid mb-12 pt-3 pb-1 bg-primary">
+
+ <div class="back-arrow text-left ">
+<span style="font-size: 48px; color: Dodgerblue;">
+ <i class="fas fa-arrow-left"></i>
+</span>
+        
+    </div>
+    <div class="head-login text-center ">
+        <h3><i class="fas fa-gift"><strong> SIGN UP</strong></i></h3>
+    </div>
+    
+    </div>
+
 <form action="/users" method="POST">
 <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
-<input type="name" name="user[name]" placeholder="john">
-<input type="submit" name="submit" class="submit">
+<div class="text-center pt-2 ">
+<input type="name" name="user[name]" placeholder="john" class="w-100 mt-4">
+<input type="submit" name="submit" class='btn btn-light w-100 mt-1'>
+ </div>
+</form>
+
+
 </form>

@@ -16,6 +16,7 @@
     <% @groups.each do |group| %>
       <tr>
         <td><%= group.name %></td>
+         <td><%= group.created_at.strftime("%b %d, %H:%M, %Y") %></td>
         <td><%= group.user_id %></td>
         <td><%= group.icon %></td>
         <td><%= link_to 'Show', group %></td>

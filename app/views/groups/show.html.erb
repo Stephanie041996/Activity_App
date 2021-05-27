@@ -17,3 +17,25 @@
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
+<table class="w-100">
+
+  <tbody class="groups-listing-table w-100">
+
+  <% @activities.each do |activity| %>
+
+    <tr class="<%= 'justify-content-around  table_row' %>">
+     
+      <td class="description me-2">
+        <h2><%= activity.name %></h2>
+        <h3><%= activity.created_at.strftime("%b %d, %H:%M, %Y") %></h3>
+      </td>
+      <td class="me-2">
+        <h2 class="amount"><%= activity.amount.to_s %>&nbsp; mins.</h2>
+      </td>
+    </tr>
+    <tr class="<%= 'justify-content-center  table_row' %>">
+      <td class="author-cell"> Author:  <%= activity.author.name %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

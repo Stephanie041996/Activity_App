@@ -17,6 +17,7 @@
     <% @activities.each do |activity| %>
       <tr>
         <td><%= activity.name %></td>
+         <td><%= activity.created_at.strftime("%b %d, %H:%M, %Y") %></td>
         <td><%= activity.author_id %></td>
         <td><%= activity.group_id %></td>
         <td><%= activity.amount %></td>

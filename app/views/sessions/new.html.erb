@@ -1,0 +1,7 @@
+<h2> Log in</h2>
+
+<form action="/sessions" method="POST">
+<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+<input type="name" name="login[name]" placeholder="john">
+<input type="submit" name="submit" class="submit">
+</form>

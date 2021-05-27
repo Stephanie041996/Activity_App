@@ -1,0 +1,6 @@
+<h2> Registration</h2>
+<form action="/users" method="POST">
+<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+<input type="name" name="user[name]" placeholder="john">
+<input type="submit" name="submit" class="submit">
+</form>

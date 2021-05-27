@@ -3,7 +3,8 @@ class ActivitiesController < ApplicationController
 
   # GET /activities or /activities.json
   def index
-    @activities = Activity.all
+    current_user = User.find(session[:user_id])
+    @activities = current_user.activities.all
   end
 
   # GET /activities/1 or /activities/1.json
@@ -22,7 +23,7 @@ class ActivitiesController < ApplicationController
   # POST /activities or /activities.json
   def create
     @activity = Activity.new(activity_params)
-
+    @activity.author_id = session[:user_id]
     respond_to do |format|
       if @activity.save
         format.html { redirect_to @activity, notice: "Activity was successfully created." }

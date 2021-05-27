@@ -8,6 +8,8 @@ class GroupsController < ApplicationController
 
   # GET /groups/1 or /groups/1.json
   def show
+    @group = Group.find(params[:id])
+    @activities = @group.activities.all
   end
 
   # GET /groups/new
@@ -22,7 +24,7 @@ class GroupsController < ApplicationController
   # POST /groups or /groups.json
   def create
     @group = Group.new(group_params)
-
+    @group.user_id = session[:user_id]
     respond_to do |format|
       if @group.save
         format.html { redirect_to @group, notice: "Group was successfully created." }
@@ -36,6 +38,7 @@ class GroupsController < ApplicationController
 
   # PATCH/PUT /groups/1 or /groups/1.json
   def update
+    group = Group.find(params[:id])
     respond_to do |format|
       if @group.update(group_params)
         format.html { redirect_to @group, notice: "Group was successfully updated." }
@@ -64,6 +67,6 @@ class GroupsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def group_params
-      params.require(:group).permit(:name, :user_id, :icon)
+      params.require(:group).permit(:name, :icon)
     end
 end

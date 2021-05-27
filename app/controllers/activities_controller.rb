@@ -4,20 +4,35 @@ class ActivitiesController < ApplicationController
   # GET /activities or /activities.json
   def index
     current_user = User.find(session[:user_id])
-    @activities = current_user.activities.all
+    @activities = if params[:ungrouped]
+                    current_user.ungrouped_activities_from_user(current_user.id)
+                  else
+                    current_user.activities.all
+                  end
+
+    puts 'hello'
   end
 
   # GET /activities/1 or /activities/1.json
   def show
+    @activity = Activity.find(params[:id])
+    @groups = @activity.group.nil? ? nil : @activity.group
   end
 
   # GET /activities/new
   def new
     @activity = Activity.new
+    @groups = Group.all
+    @groups_array = create_groups_array
+    @activities_created = activities_created
   end
 
   # GET /activities/1/edit
   def edit
+    @activity = Activity.find(params[:id])
+    @groups = Group.all
+    @groups_array = create_groups_array
+    @activities_created = activities_created
   end
 
   # POST /activities or /activities.json
@@ -58,6 +73,15 @@ class ActivitiesController < ApplicationController
   end
 
   private
+  def activities_created
+    Activity.ascending.pluck(:name)
+  end
+
+  def create_groups_array
+    arr = Group.all.pluck(:name, :id)
+    arr.insert(0, ['No group', nil])
+  end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_activity
       @activity = Activity.find(params[:id])
@@ -65,6 +89,6 @@ class ActivitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def activity_params
-      params.require(:activity).permit(:name, :author_id, :group_id, :amount)
+      params.require(:activity).permit(:name, :group_id, :amount)
     end
 end

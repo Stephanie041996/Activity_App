@@ -1,3 +1,5 @@
 <h1><%= @user.name%><h1>
 
-<%= link_to 'All my activities', activities_path, class: '' %>
+<%= link_to 'All my activities', activities_path%>
+<%= link_to 'All my external activities', activities_path(ungrouped: true) %>
+    <%= link_to 'All groups', groups_path %>

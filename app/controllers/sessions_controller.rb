@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
       user = User.find_by(name: login_params[:name])
       if user
         session[:user_id] = user.id
-        redirect_to '/dashboard'
+        redirect_to user
       else
         flash[:login_errors] = ['invalid credentials']
         render 'new'

@@ -3,8 +3,8 @@ class UsersController < ApplicationController
     def index; end
   
     def show
-      @user = User.find(params[:id])
-      # @user_activities = current_user.activities
+      redirect_to root_path unless session[:user_id]
+    @user = User.find(session[:user_id]) if session[:user_id]
       
     end
   
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       if @user.save
         # log_in @user
         session[:user_id] = @user.id
-        redirect_to '/dashboard'
+        redirect_to user
       else
         # flash[:register_errors] = user.errors.full_messages
         render 'new'

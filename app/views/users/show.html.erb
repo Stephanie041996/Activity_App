@@ -1,5 +1,45 @@
-<h1><%= @user.name%><h1>
+<body class="profile">
+<div class="container-fluid">
+<div class="d-flex justify-content-center">
+<%= image_tag "user-r.png", class: 'd-block w-50 h-50 '%>
+</div>
+<div class=" text-center ">
+<h2><%= @user.name%><h2>
+</div>
+    <div class="container ">
+  <div class="row ">
+    <div class="col-12">
+  
+      <div class="p-2">
+       
+ <%= link_to 'All my activities', activities_path, class: 'link-to-text-color'%>
+   <hr>
+          </div>
+    </div>
+  
+    <div class="col-12">
+   
+      <div class="p-2  "><%= link_to 'All my external activities', activities_path(ungrouped: true), class: 'link-to-text-color'%>
+      <hr>
+      </div>
+    </div>
+    
+    <div class="col-12">
 
-<%= link_to 'All my activities', activities_path%>
-<%= link_to 'All my external activities', activities_path(ungrouped: true) %>
-    <%= link_to 'All groups', groups_path %>
+      <div class=" p-2 ">
+    <%= link_to 'All groups', groups_path, class: 'link-to-text-color' %>
+    <hr>
+    </div>
+    </div>
+
+<div class="col-12">
+
+      <div class=" p-2 ">
+    <%= link_to 'Log Out', groups_path, class: 'link-to-text-color' %>
+    <hr>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>

@@ -1,3 +1,40 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.link-to-text-color { 
+   color:  #fff; 
+}
+
+a:link, a:visited {
+    font-size: large;
+    color: rgb(255, 254, 254);
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    }
+
+body.profile{
+    background-color: #3778c2 !important;
+}
+
+a:link, a:visited.stand-out{
+    color: rgb(107, 106, 106);
+
+}
+
+.page{
+    padding-top: 200px;
+}
+
+.profile{
+    padding-top: 80px;
+}
+
+h3, h2{
+    color: honeydew !important;
+}
+
+hr{
+    border-top: 1px solid white !important; 
+}

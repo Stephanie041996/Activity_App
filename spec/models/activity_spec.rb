@@ -1,7 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe Activity, type: :model do
- 
+  let(:group) { Activity.reflect_on_association(:group).macro }
+  let(:author) { Activity.reflect_on_association(:author).macro }
+
+  it 'checks if the Activity belongs_to the user' do
+    expect(author).to eq(:belongs_to)
+  end
+
+  it 'checks if the Activity belongs_to the group' do
+    expect(group).to eq(:belongs_to)
+  end
+
   context 'validation test' do
     it 'activity name is present' do
       activity = Activity.new().save

@@ -4,6 +4,7 @@ class Activity < ApplicationRecord
     has_and_belongs_to_many :groups
     default_scope -> { order(created_at: :desc) }
     scope :ascending, -> { order(name: :asc) }
-    validates :name, presence: true
+    validates :name, presence: true, length: {maximum:  15 }
     validates :amount, presence: true, numericality: true
+    
 end

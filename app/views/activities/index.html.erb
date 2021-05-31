@@ -30,13 +30,15 @@
     </div>
     <div class="col-8">
          <% @activities.each do |activity| %>
+         <%= link_to activity do %>
       <div class="card-body border border-1">
     
       <h5 class="card-title"><%= activity.name %><span class="like"><%= activity.amount %></span></h5>
         <p class="card-text"><small class="text-muted"><%= activity.created_at.strftime("%b %d, %H:%M, %Y") %></small></p>
-      <p><%= link_to 'view', activity, class: 'btn btn-link'  %></p>
+      <p></p>
       </div>
       <% end %>
+       <% end %>
     </div>
   </div>
 </div>

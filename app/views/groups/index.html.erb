@@ -23,7 +23,7 @@
    <% @groups.each do |group| %>
    <%= link_to  group do %>
     <div class="col-4">
-    <%= group.icon %>
+    <%= image_tag(group.icon.thumb.url, alt: 'Icon') if group.icon? %>
     </div>
     <div class="col-8">
       <h5 class="card-title"><%= group.name %><span class="like"></span></h5>

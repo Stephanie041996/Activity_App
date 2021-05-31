@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       if @user.save
         # log_in @user
         session[:user_id] = @user.id
-        redirect_to user
+        redirect_to @user
       else
         # flash[:register_errors] = user.errors.full_messages
         render 'new'

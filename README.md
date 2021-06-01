@@ -1,7 +1,7 @@
 # Group Productivity App
 
 
-![screenshot](./Image/StayInTouchApp.png) 
+![screenshot](./images/screenshot.png) 
 
 > Group Productivity is a mobile-only app where you can sign up (and/or sign in) using only your name, create groups and add activities. View created groups, created by all users and view  your own groups and activities. Keep track of the mins you spent on your activities, stay motivated by comparing to others in the group, make it a fun competetion.
 This Ruby on Rails capstone project is based on an app for grouping activities by goal with your family/friends.

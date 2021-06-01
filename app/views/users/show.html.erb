@@ -1,32 +1,37 @@
 <body class="profile">
 <div class="container-fluid">
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center p-5">
 <%= image_tag "user-r.png", class: 'd-block w-50 h-50 '%>
 </div>
-<div class=" text-center ">
+<div class="text-center ">
 <h2><%= @user.name%><h2>
+<br>
 </div>
     <div class="container ">
   <div class="row ">
     <div class="col-12">
   
       <div class="p-2">
-       
+      <i class="fa fa-list-ol fa-2x pe-5"></i>
+      
  <%= link_to 'All my activities', activities_path, class: 'link-to-text-color'%>
    <hr>
           </div>
     </div>
   
     <div class="col-12">
-   
-      <div class="p-2  "><%= link_to 'All my external activities', activities_path(ungrouped: true), class: 'link-to-text-color'%>
+ 
+      <div class="p-2 ">
+<i class="fa fa-list fa-2x pe-5"></i>
+      <%= link_to 'All my external activities', activities_path(ungrouped: true), class: 'link-to-text-color'%>
       <hr>
       </div>
     </div>
     
     <div class="col-12">
-
-      <div class=" p-2 ">
+       <div class=" p-2 ">
+<i class="fa fa-users fa-2x pe-5"></i>
+   
     <%= link_to 'All groups', groups_path, class: 'link-to-text-color' %>
     <hr>
     </div>
@@ -35,6 +40,7 @@
 <div class="col-12">
 
       <div class=" p-2 ">
+      <i class="fa fa-sign-out fa-2x pe-5"></i>
     <%= link_to 'Log Out', groups_path, class: 'link-to-text-color' %>
     <hr>
     </div>

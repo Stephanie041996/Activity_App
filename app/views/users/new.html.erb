@@ -1,25 +1,18 @@
 
+<div class="head-login text-center">
+    <div class=" p-3 d-flex justify-content-between">
 
-
-<div class="container-fluid mb-12 pt-3 pb-1 bg-primary">
-
- <div class="back-arrow text-left ">
-<span style="font-size: 48px; color: Dodgerblue;">
- <i class="fas fa-arrow-left"></i>
-</span>
-        
+     <%= link_to root_path do %><i class="fa fa-bars fa-2x "></i><%end%>
+        <h2><strong>SIGN UP</strong></h2>
+     <i class="fa fa-search fa-2x"></i>
     </div>
-    <div class="head-login text-center ">
-        <h3><i class="fas fa-gift"><strong> SIGN UP</strong></i></h3>
+  
     </div>
-    
-    </div>
-
 <form action="/users" method="POST">
 <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
 <div class="text-center pt-2 ">
 <input type="name" name="user[name]" placeholder="john" class="w-100 mt-4">
-<input type="submit" name="submit" class='btn btn-light w-100 mt-1'>
+<input type="submit" name="submit" value="Sign up" class='btn btn-light w-100 mt-1'>
  </div>
 </form>
 

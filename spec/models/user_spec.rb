@@ -4,7 +4,6 @@ RSpec.describe User, type: :model do
   let(:user) { User.create(name: 'user') }
   let(:activities) { User.reflect_on_association(:activities).macro }
   let(:groups) { User.reflect_on_association(:groups).macro }
-  
 
   it 'checks and validates user' do
     @user = User.create(name: 'user')
@@ -21,7 +20,7 @@ RSpec.describe User, type: :model do
 
   context 'validation test' do
     it 'user name is present' do
-      user = User.new().save
+      user = User.new.save
       expect(user).to eq(false)
     end
 
@@ -35,11 +34,4 @@ RSpec.describe User, type: :model do
       expect(user) == true
     end
   end
-  
-
- 
-
-  
-
- 
-  end
+end

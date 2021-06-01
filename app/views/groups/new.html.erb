@@ -1,4 +1,11 @@
-<h1>New Group</h1>
+ <div class="head-login text-center">
+    <div class=" p-3 d-flex justify-content-between">
+     <%= link_to groups_path do %><i class="fa fa-bars fa-2x "></i><%end%>
+        <h2><strong>Add New Group</strong></h2>
+     <i class="fa fa-search fa-2x"></i>
+    </div>
+ 
+    </div>
 
 <%= render 'form', group: @group %>
 

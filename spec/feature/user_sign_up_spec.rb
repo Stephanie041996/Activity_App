@@ -6,7 +6,7 @@ describe 'the signup process', type: :feature do
 
   it 'signs me up' do
     visit users_path
-   
+
     fill_in 'user[name]', with: 'jack'
 
     click_button 'submit'

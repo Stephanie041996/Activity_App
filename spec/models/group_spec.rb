@@ -14,11 +14,10 @@ RSpec.describe Group, type: :model do
 
   context 'validation test' do
     it 'group name is present' do
-      group = Group.new().save
+      group = Group.new.save
       expect(group).to eq(false)
     end
-  
-   
+
     it 'should save successfully' do
       group1 = Group.new(name: 'Test name').save
       expect(group1) == true

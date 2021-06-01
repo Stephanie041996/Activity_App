@@ -1,13 +1,22 @@
-<p id="notice"><%= notice %></p>
 
+ <div class="head-login text-center">
+    <div class=" p-3 d-flex justify-content-between">
+     <%= link_to activities_path do %><i class="fa fa-bars fa-2x "></i><%end%>
+        <h2><strong><%= @activity.name %></strong></h2>
+     <i class="fa fa-search fa-2x"></i>
+    </div>
+ 
+    </div>
+<p id="notice"><%= notice %></p>
+<div class="col-12 text-center">
 <p>
   <strong>Name:</strong>
   <%= @activity.name %>
 </p>
- <p><%= @activity.created_at.strftime("%b %d, %H:%M, %Y") %></p>
+ <p><strong>Date created:</strong><%= @activity.created_at.strftime("%b %d, %H:%M, %Y") %></p>
 <p>
   <strong>Author:</strong>
-  <%= @activity.author_id %>
+  <%= @activity.author.name %>
 </p>
 
 <p>
@@ -20,5 +29,12 @@
   <%= @activity.amount %>
 </p>
 
-<%= link_to 'Edit', edit_activity_path(@activity) %> |
-<%= link_to 'Back', activities_path %>
+  </div>
+   
+
+<br>
+
+<div class="d-grid gap-2 m-3">
+<%= link_to 'New Activity', new_activity_path, class: " p-4 btn btn-primary"%>
+  
+</div>

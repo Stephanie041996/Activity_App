@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  
+    <%= form.text_field :name, placeholder: "Name", class: "w-100 mt-4" %>
   </div>
 
   <div class="field">
-    <%= form.label :author_id %>
-    <%= form.text_field :author_id %>
+    
+    <%= form.text_field :author_id, placeholder: "Author ID", type:"hidden" %>
   </div>
 
   <div class="field">
-    <%= form.label :group_id %>
-    <%= form.text_field :group_id %>
+  
+    <%= form.text_field :group_id, placeholder: "Group ID", class: "w-100 mt-4" %>
   </div>
 
-  <div class="field">
-    <%= form.label :amount %>
-    <%= form.text_field :amount %>
+  <div class="field ">
+
+    <%= form.text_field :amount, placeholder: "Mins spent", class: "w-100 mt-4" %>
   </div>
 
-  <div class="actions">
+  <div class="actions w-100 mt-4 d-flex justify-content-center ">
     <%= form.submit %>
   </div>
 <% end %>

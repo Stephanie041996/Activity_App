@@ -1,51 +1,46 @@
-
-<div class="container-fluid mb-12 pt-3 pb-1 bg-primary">
-
- <div class="back-arrow text-left ">
-<span style="font-size: 48px; color: Dodgerblue;">
- <i class="fas fa-arrow-left"></i>
-</span>
-        
-    </div>
-    <div class="head-login text-center ">
-        <h3><i class="fas fa-gift"><strong>Activities</strong></i></h3>
-        <br>
-        <p>Most recent</p>
-    </div>
-    
-    </div>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 <p id="notice"><%= notice %></p>
+ <div class="head-login text-center">
+    <div class=" p-3 d-flex justify-content-between">
+ <%# <%= link_to ('<i class="fa fa-bars" id="logo"></i>').html_safe, current_user %> 
+     <%= link_to dashboard_path do %><i class="fa fa-bars fa-2x "></i><%end%>
+        <h2><strong>Activities</strong></h2>
+     <i class="fa fa-search fa-2x"></i>
+    </div>
+    <p >Most recent</p>
+    </div>
 
-  <div class="row ">
-    <div class="col-12 p-5 border border-1">
+  <div class="row">
+    <div class="col-12 p-2 border border-1 ps-3 pe-3">
  <h5 class="card-title">TOTAL MINS<span class="like"><%= @activities.sum(:amount).round(2) %>&nbsp;mins.</span></h5>
 </div>
 </div>
-<div class="container">
 
-<div class="card  mx-auto sm-3" style="max-width: 940px;">
-  <div class="row g-0">
-    <div class="col-4">
-      <%= image_tag "icons8-left-arrow-48.png"%>
-    </div>
-    <div class="col-8">
-         <% @activities.each do |activity| %>
+
+<% @activities.each do |activity| %>
          <%= link_to activity do %>
-      <div class="card-body border border-1">
-    
-      <h5 class="card-title"><%= activity.name %><span class="like"><%= activity.amount %></span></h5>
-        <p class="card-text"><small class="text-muted"><%= activity.created_at.strftime("%b %d, %H:%M, %Y") %></small></p>
-      <p></p>
-      </div>
+  <div class="row p-2 m-3 border border-1">
+  
+    <div class="col-4 ">
+      <%= insert_activity_icon(activity)%>
+ 
+  </div>
+  
+    <div class="col-8">
+     
+      <h5><%= activity.name %><span class="like"><%= activity.amount %></span></h5>
+      <p><small class="text-muted"><%= activity.created_at.strftime("%b %d, %H:%M, %Y") %></small></p>
+       </div>
+       </div>
       <% end %>
        <% end %>
-    </div>
-  </div>
-</div>
-</div>
+   
+
+
+
 <br>
-  <div class="row ">
-    <div class="col-12">
-<%= link_to 'New Activity', new_activity_path, class: 'btn btn-primary w-100 mt-1'%>
-</div>
+
+<div class="d-grid gap-2 m-3">
+<%= link_to 'New Activity', new_activity_path, class: " p-4 btn btn-primary"%>
+  
 </div>

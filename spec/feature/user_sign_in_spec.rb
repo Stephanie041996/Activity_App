@@ -6,7 +6,7 @@ describe 'the signin process', type: :feature do
 
   it 'signs me in' do
     visit sessions_path
-   
+
     fill_in 'login[name]', with: 'jack'
 
     click_button 'submit'

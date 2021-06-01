@@ -34,7 +34,17 @@ p {
   color: white;
 }
 
-a:visited, .profile a:link {
+a:visited,
+.page a:link {
+  font-size: large;
+  color: white;
+  padding: 0;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:visited,
+.profile a:link {
   font-size: large;
   color: white;
   padding: 0;
@@ -53,14 +63,6 @@ a:visited, .profile a:link {
 .profile h2 {
   color: white;
   font-size: 25px;
-}
-
-a:visited, .page a:link {
-  font-size: large;
-  color: white;
-  padding: 0;
-  text-decoration: none;
-  display: inline-block;
 }
 
 .head-top {

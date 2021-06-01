@@ -27,7 +27,7 @@ This Ruby on Rails capstone project is based on an app for grouping activities b
 
 ## Live Demo
 
-[Live Site](https://calm-woodland-30958.herokuapp.com/)
+[Live Site](https://blooming-spire-42876.herokuapp.com/)
 
 
 ## Getting started

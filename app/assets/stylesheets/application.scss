@@ -34,8 +34,7 @@ p {
   color: white;
 }
 
-.profile a:link,
- a:visited {
+a:visited, .profile a:link {
   font-size: large;
   color: white;
   padding: 0;
@@ -56,8 +55,7 @@ p {
   font-size: 25px;
 }
 
-.page a:link,
- a:visited {
+a:visited, .page a:link {
   font-size: large;
   color: white;
   padding: 0;

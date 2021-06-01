@@ -27,14 +27,15 @@ p {
 }
 
 .head-login p {
-    color: white;
-  }
+  color: white;
+}
 
 .fa {
   color: white;
 }
 
-.profile a:link, a:visited {
+.profile a:link,
+ a:visited {
   font-size: large;
   color: white;
   padding: 0;
@@ -43,11 +44,11 @@ p {
 }
 
 .profile {
-  background-color: #3778c2;   
+  background-color: #3778c2;
 }
 
 .hr {
-  color:white;
+  color: white;
 }
 
 .profile h2 {
@@ -55,7 +56,8 @@ p {
   font-size: 25px;
 }
 
-.page a:link, a:visited {
+.page a:link,
+ a:visited {
   font-size: large;
   color: white;
   padding: 0;
@@ -72,7 +74,7 @@ p {
 }
 
 .btn-light {
-  font-size:18px !important;
+  font-size: 18px !important;
 }
 
 .w-100 {

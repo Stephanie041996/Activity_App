@@ -14,6 +14,7 @@ gem 'jquery-rails'
 gem 'mini_magick'
 gem 'pg'
 gem 'sassc-rails', '>= 2.1.0'
+gem 'chartkick'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets

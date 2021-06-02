@@ -21,11 +21,12 @@
     <%= form.text_field :author_id, placeholder: "Author ID", type:"hidden" %>
   </div>
 
-  <div class="field">
+  <div class="field select-box d-flex justify-content-center w-100 mt-4">
   
-    <%= form.text_field :group_id, placeholder: "Group ID", class: "w-100 mt-4" %>
-  </div>
-
+    <%= form.text_field :group_id, placeholder: "Group ID", type:"hidden" %>
+ 
+  <%= form.select :group_id, @groups_array %>
+ </div>
   <div class="field ">
 
     <%= form.text_field :amount, placeholder: "Mins spent", class: "w-100 mt-4" %>

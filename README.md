@@ -1,6 +1,5 @@
 # Group Productivity App
 
-
 ![screenshot](./images/screenshot.png) 
 
 > Group Productivity is a mobile-only app where you can sign up (and/or sign in) using only your name, create groups and add activities. View created groups, created by all users and view  your own groups and activities. Keep track of the mins you spent on your activities, stay motivated by comparing to others in the group, make it a fun competetion.
@@ -9,16 +8,14 @@ This Ruby on Rails capstone project is based on an app for grouping activities b
 ## Basic Features and Usage:
 -  Home screen
 -  Basic login: You can log into the app or signup with just a user name. *(Icon automatically assigned)*
--  Profile view with links to groups and created transactions.
--  View all your grouped transactions.
--  View all your ungrouped transactions.
+-  Profile view with links to groups and created activities.
+-  View all your grouped activities.
+-  View all your ungrouped activities.
 -  View all the groups made in the app.
--  View details for each transaction. *(Can access them from grouped and ungrouped transaction views as well as from the group info view)*
--  Make a new transaction, with ot without belonging to a group.
--  View details for each group, which include the transactions owned by that group. *(Can access from the all groups view)*
+-  View details for each activity. *(Can access them from grouped and ungrouped activity views as well as from the group info view)*
+-  Make a new activity, with ot without belonging to a group.
+-  View details for each group, which include the activities owned by that group. *(Can access from the all groups view)*
 -  Make a new group.
-
-
 
 ## Built With
 
@@ -51,26 +48,22 @@ Next, migrate the database:
 $ rails db:migrate
 ```
 
+### Usage
+
+Start server with:
+
+```
+    rails server
+```
+
+Open `http://localhost:3000/` in your browser.
+
 ### Prerequisites
 
 Ruby: 2.6.3
 Rails: 5.2.3
 Postgres: >=9.5
 
-### Setup
-
-Instal gems with:
-
-```
-bundle install
-```
-
-Setup database with:
-
-```
-   rails db:create
-   rails db:migrate
-```
 
 ### Github Actions
 
@@ -81,16 +74,6 @@ To make sure the linters' checks using Github Actions work properly, you should 
 3. Start working on your milestone as usual.
 4. Open a PR from the `feature/branch` when your work is done.
 
-
-### Usage
-
-Start server with:
-
-```
-    rails server
-```
-
-Open `http://localhost:3000/` in your browser.
 
 ### Running RSpec tests
 
@@ -110,7 +93,6 @@ Open `http://localhost:3000/` in your browser.
 
 - GitHub: [@stephanie041996](https://github.com/Stephanie041996)
 - LinkedIn: [Stephanie Sakuhuni](www.linkedin.com/in/stephanie-michelle-sakuhuni) 
-
 
 ## 🤝 Contributing
 

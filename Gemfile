@@ -9,12 +9,12 @@ gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'carrierwave', '~> 2.2', '>= 2.2.2'
+gem 'chartkick'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'mini_magick'
 gem 'pg'
 gem 'sassc-rails', '>= 2.1.0'
-gem 'chartkick'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets

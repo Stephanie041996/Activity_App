@@ -3,7 +3,8 @@
     <div class=" p-3 d-flex justify-content-between">
      <%= link_to groups_path do %><i class="fa fa-bars fa-2x "></i><%end%>
         <h2><strong><%= @group.name %></strong></h2>
-     <i class="fa fa-search fa-2x"></i>
+        <%= link_to @group, method: :delete, data: { confirm: 'Are you sure?' } do%> 
+     <i class="fa fa-trash fa-2x"></i><%end%>
     </div>
     <p >Most recent</p>
     </div>

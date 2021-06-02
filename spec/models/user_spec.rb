@@ -25,8 +25,8 @@ RSpec.describe User, type: :model do
     end
 
     it 'makes sure the minimum length of name is at least 3' do
-      user = User.new(name: 'user').save
-      expect(user).to eq(true)
+      user = User.new(name: 'ki').save
+      expect(user).to eq(false)
     end
 
     it 'should save successfully' do

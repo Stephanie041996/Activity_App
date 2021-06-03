@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'users#index'
+
+  get '/users', to: 'users#new'
   get '/sessions', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
+  post '/users', to: 'users#create'
   get '/dashboard', to: 'users#show'
  
   resources :users

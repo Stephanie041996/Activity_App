@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/users', to: 'users#new'
   get '/sessions', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
+  post '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
   post '/users', to: 'users#create'
   get '/dashboard', to: 'users#show'
  

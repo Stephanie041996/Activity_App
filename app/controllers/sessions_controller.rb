@@ -10,9 +10,20 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    log_out
+    flash[:danger] = 'User logged out'
+    redirect_to root_path
+  end
+
   private
 
   def login_params
     params.require(:login).permit(:name)
+  end
+
+  def log_out
+    session.delete(:user_id)
+    @current_user = nil
   end
 end

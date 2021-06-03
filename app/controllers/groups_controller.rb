@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
   # GET /groups/1 or /groups/1.json
   def show
     @group = Group.find(params[:id])
-    @activities = @group.activities.all
+    @activities = @group.activities.includes(:author)
   end
 
   # GET /groups/new

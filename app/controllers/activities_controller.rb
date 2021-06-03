@@ -5,9 +5,9 @@ class ActivitiesController < ApplicationController
   def index
     current_user = User.find(session[:user_id])
     @activities = if params[:ungrouped]
-                    current_user.ungrouped_activities_from_user(current_user.id)
+                    current_user.ungrouped_activities_from_user(current_user.id).includes(:group)
                   else
-                    current_user.activities.all
+                    current_user.activities.includes(:group)
                   end
 
     puts 'hello'

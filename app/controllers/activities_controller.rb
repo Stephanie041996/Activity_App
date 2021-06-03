@@ -4,7 +4,6 @@ class ActivitiesController < ApplicationController
   # GET /activities or /activities.json
   def index
     current_user = User.find(session[:user_id])
-    @data = User.joins(:activities).group(:name).sum(:amount)
     @activities = if params[:ungrouped]
                     current_user.ungrouped_activities_from_user(current_user.id)
                   else

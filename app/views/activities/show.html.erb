@@ -2,7 +2,7 @@
  <div class="head-login text-center">
     <div class=" p-3 d-flex justify-content-between">
      <%= link_to activities_path do %><i class="fa fa-bars fa-2x "></i><%end%>
-        <h2><strong><%= @activity.name %></strong></h2>
+        <h2><strong>Activity</strong></h2>
     <%= link_to @activity, method: :delete, data: { confirm: 'Are you sure?' } do%> 
      <i class="fa fa-trash fa-2x"></i><%end%>
     </div>
@@ -20,10 +20,6 @@
   <%= @activity.author.name %>
 </p>
 
-<p>
-  <strong>Group:</strong>
-  <%= @activity.group.name %>
-</p>
 
 <p>
   <strong>Amount:</strong>

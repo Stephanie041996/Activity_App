@@ -1,5 +1,5 @@
-class LeaderboardController < ApplicationController
-  def show
+class LeaderboardsController < ApplicationController
+  def index
     @data = User.joins(:activities).group(:name).sum(:amount)
   end
 end

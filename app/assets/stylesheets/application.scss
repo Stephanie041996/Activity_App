@@ -1,0 +1,104 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+.like {
+  float: right;
+  font-size: 14px;
+  position: relative;
+}
+
+h5 {
+  font-size: 18px !important;
+  color: rgb(97, 97, 97);
+}
+
+.head-login {
+  background-color: #3778c2;
+}
+
+.head-login h2 {
+  font-size: 23px !important;
+  color: white;
+}
+
+p {
+  font-size: 14px;
+}
+
+.head-login p {
+  color: white;
+}
+
+.fa {
+  color: white;
+}
+
+a:visited,
+.page a:link {
+  font-size: large;
+  color: white;
+  padding: 0;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.profile a:link {
+  font-size: large;
+  color: white;
+  padding: 0;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.profile {
+  background-color: #3778c2;
+}
+
+.hr {
+  color: white;
+}
+
+.profile h2 {
+  color: white;
+  font-size: 25px;
+}
+
+.head-top {
+  padding-top: 150px;
+}
+
+.stand-out {
+  background-color: rgb(168, 166, 166) !important;
+}
+
+.btn-light {
+  font-size: 18px !important;
+}
+
+.w-100 {
+  height: 50px;
+  font-size: 18px;
+}
+
+.col-8 p {
+  color: rgb(107, 105, 105);
+  font-size: 12px;
+}
+
+select {
+  width: 100%;
+}
+
+.d-grid {
+  background-color: #5fb523;
+}
+
+.btn-outline-light {
+  border: cornsilk;
+  font-size: 18px !important;
+}
+
+.board {
+  padding: 100px;
+}

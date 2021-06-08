@@ -1,0 +1,42 @@
+
+<div class="head-login text-center">
+    <div class=" p-3 d-flex justify-content-between">
+     <%= link_to groups_path do %><i class="fa fa-bars fa-2x "></i><%end%>
+        <h2><strong><%= @group.name %></strong></h2>
+        <%= link_to @group, method: :delete, data: { confirm: 'Are you sure?' } do%> 
+     <i class="fa fa-trash fa-2x"></i><%end%>
+    </div>
+    <p >Most recent</p>
+    </div>
+<p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="col-12 p-2 border border-1 ps-3 pe-3">
+ <h5 class="card-title">TOTAL MINS<span class="like"><%= @activities.sum(:amount).round(2) %>&nbsp;mins.</span></h5>
+</div>
+</div>
+
+<% @activities.each do |activity| %>
+         <%= link_to activity do %>
+  <div class="row p-2 m-3 border border-1">
+  
+    <div class="col-4 ">
+      <%= insert_activity_icon(activity)%>
+ 
+  </div>
+  
+    <div class="col-8">
+     
+      <h5><%= activity.name %><span class="like"><%= activity.amount %></span></h5>
+      <p><small class="text-muted"><%= activity.created_at.strftime("%b %d, %H:%M, %Y") %></small></p>
+      <p>Author: <%= activity.author.name %></p>
+       </div>
+       </div>
+      <% end %>
+       <% end %>
+
+<br>
+
+<div class="d-grid gap-2 m-3">
+<%= link_to 'New Activity', new_activity_path, class: "m-4 p-4 btn btn-outline-light"%>
+  
+</div>

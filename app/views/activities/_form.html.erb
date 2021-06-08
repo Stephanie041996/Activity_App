@@ -12,26 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  
+    <%= form.text_field :name, placeholder: "Name", class: "w-100 mt-4" %>
   </div>
 
   <div class="field">
-    <%= form.label :author_id %>
-    <%= form.text_field :author_id %>
+    
+    <%= form.text_field :author_id, placeholder: "Author ID", type:"hidden" %>
   </div>
 
-  <div class="field">
-    <%= form.label :group_id %>
-    <%= form.text_field :group_id %>
+  <div class="field select-box d-flex justify-content-center w-100 mt-4">
+  
+    <%= form.text_field :group_id, placeholder: "Group ID", type:"hidden" %>
+ 
+  <%= form.select :group_id, @groups_array %>
+ </div>
+  <div class="field ">
+
+    <%= form.number_field :amount, placeholder: "Mins spent", class: "w-100 mt-4" %>
   </div>
 
-  <div class="field">
-    <%= form.label :amount %>
-    <%= form.text_field :amount %>
-  </div>
-
-  <div class="actions">
+  <div class="actions w-100 mt-4 d-flex justify-content-center ">
     <%= form.submit %>
   </div>
 <% end %>

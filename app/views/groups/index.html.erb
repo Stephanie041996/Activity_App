@@ -1,0 +1,45 @@
+
+<div class="head-login text-center">
+    <div class=" p-3 d-flex justify-content-between">
+
+     <%= link_to dashboard_path do %><i class="fa fa-bars fa-2x "></i><%end%>
+        <h2><strong>Groups</strong></h2>
+     <i class="fa fa-search fa-2x"></i>
+    </div>
+  
+    </div>
+<p id="notice"><%= notice %></p>
+
+ <% @groups.each do |group| %>
+         <%= link_to  group do %>
+  <div class="row p-2 m-3 border border-1">
+  
+    <div class="col-4 ">
+      <%= image_tag(group.icon.thumb.url, alt: 'Icon') if group.icon? %>
+ 
+  </div>
+  
+    <div class="col-8">
+       <h5><%= group.name %><span class="like"></span></h5>
+    <p><small class="text-muted"><%= group.created_at.strftime("%b %d, %H:%M, %Y") %></small></p>
+      
+
+          </div>
+       </div>
+      <% end %>
+       <% end %>
+<br>
+
+<div class="d-grid gap-2 m-3">
+<%= link_to 'New Group', new_group_path, class: "m-4 p-4 btn btn-outline-light"%>
+  
+</div>
+ 
+
+
+
+
+
+
+
+
